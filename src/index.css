@@ -1,0 +1,104 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+    padding: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+input,
+button {
+    outline: none;
+    border: 0;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 300px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.title {
+    text-align: center;
+}
+.container {
+}
+
+.input-content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.todo-input {
+    padding: 8px 10px;
+    margin: 8px 0;
+    flex: 3;
+    border-radius: 4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.submit-btn {
+    flex: 1;
+    padding: 8px 10px;
+    cursor: pointer;
+    background-color: rgb(74, 74, 245);
+    color: #fff;
+    border-radius: 4px;
+}
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.todo-list {
+}
+.todo-item {
+    padding: 2px 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item:first-child {
+    margin-top: 10px;
+}
+.todo-item:not(:last-child) {
+    border-bottom: 1px solid #868686;
+    margin-bottom: 10px;
+}
+
+.todo-name {
+    cursor: pointer;
+}
+
+.item-action {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 4px;
+}
